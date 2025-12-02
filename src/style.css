@@ -1,0 +1,160 @@
+/* =============================== */
+/* GLOBAL                          */
+/* =============================== */
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* =============================== */
+/* FORMULÁRIOS (AddTask / AddCategory) */
+/* =============================== */
+
+.box {
+  background: white;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* =============================== */
+/* CATEGORY CARD                   */
+/* =============================== */
+
+.category-card {
+  background: white;
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+}
+
+.category-card h2 {
+  font-size: 18px;
+  margin: 0 0 12px 0;
+  color: #333;
+}
+
+/* =============================== */
+/* TASK LIST                       */
+/* =============================== */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* =============================== */
+/* TASK ITEM                       */
+/* =============================== */
+
+.task-item {
+  background: #ffffff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  box-sizing: border-box;
+}
+
+.task-item input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.task-item span {
+  flex: 1;
+
+  /* evita quebra feia */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+
+  font-size: 15px;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* vazio */
+.empty {
+  color: #777;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* Ajustes extras específicos para telas pequenas (Pixel 7 e similares) */
+@media (max-width: 500px) {
+
+  .box {
+    padding: 12px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .task-item {
+    padding: 10px;
+  }
+
+  .task-item span {
+    font-size: 14.5px;
+  }
+
+  .category-card {
+    padding: 14px;
+  }
+}
